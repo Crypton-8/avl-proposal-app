@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVL Proposal Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h1>AVL Proposal Generator</h1>
+      <p>Fill out the project details below to generate a professional proposal.</p>
+
+      <form id="proposal-form">
+
+        <div class="form-group">
+          <label for="client-name">Client Name</label>
+          <input type="text" id="client-name" placeholder="e.g. Grace Community Church" />
+        </div>
+
+        <div class="form-group">
+          <label for="project-type">Project Type</label>
+          <select id="project-type">
+            <option value="">-- Select a project type --</option>
+            <option value="house-of-worship">House of Worship</option>
+            <option value="corporate">Corporate / Conference Room</option>
+            <option value="education">Education / Classroom</option>
+            <option value="live-events">Live Events / Staging</option>
+            <option value="restaurant-bar">Restaurant / Bar</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="room-size">Room Size</label>
+          <select id="room-size">
+            <option value="">-- Select room size --</option>
+            <option value="small">Small (under 50 people)</option>
+            <option value="medium">Medium (50–200 people)</option>
+            <option value="large">Large (200–500 people)</option>
+            <option value="xlarge">Extra Large (500+ people)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="budget">Estimated Budget</label>
+          <select id="budget">
+            <option value="">-- Select budget range --</option>
+            <option value="under-10k">Under $10,000</option>
+            <option value="10k-25k">$10,000 – $25,000</option>
+            <option value="25k-50k">$25,000 – $50,000</option>
+            <option value="50k-100k">$50,000 – $100,000</option>
+            <option value="100k-plus">$100,000+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="goals">Client Goals & Notes</label>
+          <textarea id="goals" rows="5" placeholder="e.g. They want to improve Sunday service audio, currently have no video capabilities, and want a simple system their volunteers can operate..."></textarea>
+        </div>
+
+        <button type="button" id="generate-btn">Generate Proposal</button>
+
+      </form>
+
+    </div>
+<script src="script.js"></script>
+  </body>
+</html>
+  </body>
+</html>

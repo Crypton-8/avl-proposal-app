@@ -1,0 +1,233 @@
+/* ── Reset & Base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ── Container ── */
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 48px;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* ── Heading ── */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+/* ── Form Groups ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  font-size: 15px;
+  padding: 10px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  color: #1a1a2e;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ── Button ── */
+button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 14px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+/* ── Proposal Output ── */
+#proposal-output {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 2px solid #e5e7eb;
+}
+
+#proposal-output h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 16px;
+}
+
+.proposal-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #374151;
+  white-space: pre-wrap;
+}
+
+/* ── Proposal Output ── */
+#proposal-output {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.proposal-header {
+  margin-bottom: 24px;
+}
+
+.proposal-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0a1628;
+  margin-bottom: 8px;
+}
+
+.proposal-meta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.proposal-body p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.proposal-section {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0a1628;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.proposal-subheading {
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.proposal-body ul {
+  margin: 8px 0 12px 20px;
+}
+
+.proposal-body li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.proposal-actions {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+#print-btn {
+  background-color: #059669;
+  width: auto;
+  padding: 12px 28px;
+}
+
+#print-btn:hover {
+  background-color: #047857;
+}
+
+/* ── Print Styles ── */
+@media print {
+  body {
+    background: white;
+  }
+  .container {
+    box-shadow: none;
+    padding: 0;
+  }
+  #proposal-form {
+    display: none;
+  }
+  #print-btn {
+    display: none;
+  }
+}
+.proposal-main-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0a1628;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.proposal-subsection {
+  font-size: 15px;
+  font-weight: 700;
+  color: #374151;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+.proposal-divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 20px 0;
+}
