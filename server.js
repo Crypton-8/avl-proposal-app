@@ -6,6 +6,7 @@ import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
 console.log('API Key starts with:', process.env.ANTHROPIC_API_KEY?.slice(0, 10));
+process.on('uncaughtException', (err) => console.error('CRASH:', err));
 
 const app = express();
 
