@@ -48,6 +48,11 @@ try {
 
     const data = await response.json();
     console.log('API Response:', JSON.stringify(data));
+    console.log('API Response:', JSON.stringify(data));
+    if (!data.content || !data.content[0]) {
+      alert('Error: ' + (data.error?.message || 'Unknown error'));
+      return;
+    }
     const proposalText = data.content[0].text;
     displayProposal(proposalText);
 
