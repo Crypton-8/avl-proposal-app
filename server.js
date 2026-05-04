@@ -1,12 +1,13 @@
-import dotenv from 'dotenv';
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config();
-}
 import express from 'express';
 import cors from 'cors';
 import fetch from 'node-fetch';
+
+if (process.env.NODE_ENV !== 'production') {
+  const dotenv = await import('dotenv');
+  dotenv.default.config();
+}
+
 console.log('API Key starts with:', process.env.ANTHROPIC_API_KEY?.slice(0, 10));
-process.on('uncaughtException', (err) => console.error('CRASH:', err));
 
 const app = express();
 
