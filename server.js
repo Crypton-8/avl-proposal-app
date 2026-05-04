@@ -1,10 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import fetch from 'node-fetch';
+const express = require('express');
+const cors = require('cors');
 
 if (process.env.NODE_ENV !== 'production') {
-  const dotenv = await import('dotenv');
-  dotenv.default.config();
+  require('dotenv').config();
 }
 
 console.log('API Key starts with:', process.env.ANTHROPIC_API_KEY?.slice(0, 10));
@@ -18,6 +16,7 @@ app.use(express.static('.'));
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
+
 app.post('/generate', async (req, res) => {
   const { prompt } = req.body;
 
@@ -39,7 +38,7 @@ app.post('/generate', async (req, res) => {
     });
 
     const data = await response.json();
-    console.log('Anthropic response:', JSON.stringify(data));
+    console.log('Anthropic response:', JSON.stringify(data).slice(0, 100));
     res.json(data);
 
   } catch (error) {
@@ -50,5 +49,5 @@ app.post('/generate', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
