@@ -15,6 +15,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
 app.post('/generate', async (req, res) => {
   const { prompt } = req.body;
 
