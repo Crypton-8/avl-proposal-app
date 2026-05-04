@@ -35,10 +35,9 @@ The proposal should include:
 
 Write in a professional but approachable tone. Be specific and relevant to the AVL industry.`;
 
-  try {
-    const apiUrl = window.location.hostname === 'localhost' 
-      ? 'http://localhost:3000/generate' 
-      : '/generate';
+try {
+    const isLocal = window.location.hostname === 'localhost';
+    const apiUrl = isLocal ? 'http://localhost:3000/generate' : '/generate';
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
